@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIC TAC TOE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>TIC TAC TOE</h1>
+
+  <label id="difficulty-label">
+    Difficulty:
+    <select id="difficulty" onchange="restartGame()">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard" selected>Hard</option>
+    </select>
+  </label>
+
+  <div id="turnIndicator">Turn: X</div>
+
+  <div id="board">
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+    <div class="cell" onclick="handleClick(this)"></div>
+  </div>
+
+  <button id="restartBtn" onclick="restartGame()">Restart Game</button>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="popupMessage">Game Over</h2>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <div id="footer">Made By Poornay</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
